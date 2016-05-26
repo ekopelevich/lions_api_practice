@@ -1,0 +1,16 @@
+h1 {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 80px;
+  color: teal;
+}
+
+form {
+  width: 400px;
+}
+
+.update {
+  margin-right: 20px;
+}

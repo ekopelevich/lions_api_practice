@@ -1,0 +1,43 @@
+<div class="container">
+  <header>
+    <h1>{{title}}</h1>
+  </header>
+  <h3>Add a Lion</h3>
+  <form action="/lions" method="POST">
+    <label for="name">Name</label>
+    <input class="form-control" type="text" name="name" value="">
+    <label for="age">Age</label>
+    <input class="form-control" type="number" name="age" value="">
+    <label for="gender">Gender</label>
+    <select class="form-control" name="gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+    </select>
+    <label for="pride">Pride</label>
+    <input class="form-control" type="text" name="pride" value="">
+    <br>
+    <input class="btn btn-success pull-right" type="submit" value="Submit">
+  </form>
+
+  <h3>Update or Delete a Lion</h3>
+  <form>
+    <label for="name">Select a Lion to Update</label>
+    <select class="form-control lion-names name" name="name"></select>
+    <input class="lion-id" type="text" name="id" hidden>
+    <label for="age">Age</label>
+    <input class="form-control age" type="number" name="age">
+    <label for="gender">Gender</label>
+    <select class="form-control gender" name="gender">
+        <option>Female</option>
+        <option>Male</option>
+        <option>Other</option>
+    </select>
+    <label for="pride">Pride</label>
+    <input class="form-control pride" type="text" name="pride">
+    <br>
+
+    <input class="btn btn-danger pull-right delete" type="submit" value="Delete">
+    <input class="btn btn-warning pull-right update" type="submit" value="Update">
+  </form>
+</div>

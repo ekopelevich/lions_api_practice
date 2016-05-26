@@ -1,0 +1,25 @@
+{
+  "name": "RESTful Lions",
+  "version": "1.0.0",
+  "description": "Following along with FEM",
+  "author": "Elana Kopelevich",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "RESTful",
+    "API"
+  ],
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "hbs": "^4.0.0",
+    "lodash": "^4.13.1",
+    "nodemon": "^1.9.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "morgan": "^1.7.0"
+  },
+  "licence": "ISC"
+}
