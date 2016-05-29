@@ -9,8 +9,8 @@ var addUpdateListener = function(){
     console.log('here');
     e.preventDefault();
     data = {
-      name: $('.lion-name').val(),
-      id: $('.lion-id').val(),
+      name: $('.name').val(),
+      id: $('.id').val(),
       age: $('.age').val(),
       pride: $('.pride').val(),
       gender: $('.gender').val()
@@ -32,7 +32,7 @@ var addUpdateListener = function(){
 var addDeleteListener = function(){
   var data;
   $('.delete').click(function(){
-    data = {id: $('.lion-id').val()}
+    data = {id: $('.id').val()}
     $.ajax({
       url: 'http://localhost:3000/lions/' + data.id,
       method: 'DELETE',

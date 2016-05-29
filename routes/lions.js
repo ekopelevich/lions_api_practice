@@ -5,14 +5,14 @@ var _ = require('lodash');
 var lions = [{
   name: "Simba",
   age: 3,
-  pride: "cool cats",
+  pride: "Cool Cats",
   gender: "male",
   id: '1'
 },
 {
   name: "Nalah",
   age: 2,
-  pride: "cool cats",
+  pride: "Cool Cats",
   gender: "female",
   id: '2',
 }
@@ -52,7 +52,7 @@ router.route('/')
 
 router.route('/new')
   .get(function(req, res){
-    res.render('new', {
+    res.render('lions/new', {
       title: 'Lions!',
       layout: 'layout'
     });
@@ -86,7 +86,6 @@ router.route('/:id')
     }
   })
   .delete(function(req, res){
-    console.log('deleting!', req.body.id);
     for (var i = 0; i < lions.length; i++) {
       if (req.body.id === lions[i].id) {
         lions.splice(i, 1);
@@ -98,7 +97,7 @@ router.route('/:id')
 router.route('/:id/edit')
   .get(function(req, res){
     console.log(req.lion);
-    res.render('edit', {
+    res.render('lions/edit', {
       title: 'Lions!',
       name: req.lion.name,
       age: req.lion.age,

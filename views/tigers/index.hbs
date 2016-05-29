@@ -1,0 +1,12 @@
+<a class="btn-add" href="/tigers/new"><button type="button" class="btn btn-success ">Add a Tiger</button></a>
+<div class="tigers">
+  {{#each tigers}}
+  <div class="lion">
+    <h3>{{this.name}}</h3>
+    <p>Age: {{this.age}}</p>
+    <p>Gender: {{this.gender}}</p>
+    <p>Pride: {{this.pride}}</p>
+    <a href= "/tigers/{{this.id}}/edit"><button type="button" class="btn btn-warning">Edit or Delete</button></a>
+  </div>
+  {{/each}}
+</div>

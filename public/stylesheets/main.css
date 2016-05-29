@@ -1,8 +1,14 @@
 body {
   min-height: 100%;
-  background-image: url('../images/background.jpg');
   color: #fff;
+}
 
+.lion-body {
+  background-image: url('../images/lion_bg.jpg');
+}
+
+.tiger-body {
+  background-image: url('../images/tiger_bg.jpg');
 }
 
 #wrap {
@@ -15,20 +21,20 @@ a, a:hover {
   color: inherit;
 }
 
-.container, .lion {
+.container, .lion, .tiger {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.lions {
+.lions, .tigers {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   padding-top: 60px;
 }
 
-.lion {
+.lion, .tiger {
   background-color: hsla(360, 100%, 100%, 0.5);
   border-radius: 5px;
   min-width: 220px;
@@ -40,7 +46,7 @@ a, a:hover {
   align-self: flex-end;
 }
 
-.btn-tiger {
+.btn-tiger, .btn-lion {
   align-self: flex-end;
 }
 
