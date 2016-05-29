@@ -1,51 +1,26 @@
 $(document).ready(function(){
-  console.log('sanity check');
-  populateLionNames()
-  populateLionId();
   addUpdateListener();
   addDeleteListener();
 })
 
-var populateLionNames = function(){
-  var name;
-  $.get('http://localhost:3000/lions', function(data){
-    for (var i = 0; i < data.length; i++) {
-      name = data[i].name;
-      $('.lion-names').append('<option>' + name + '</option>');
-    }
-  });
-}
-
-var populateLionId = function(){
-  $('.lion-names').change(function(){
-    $.get('http://localhost:3000/lions', function(data){
-      // console.log('here');
-      for (var i = 0; i < data.length; i++) {
-        if ($('.lion-names').val() == data[i].name) {
-          $('.lion-id').val(data[i].id);
-          console.log('id', $('.lion-id').val());
-        }
-      }
-    });
-  });
-}
-
 var addUpdateListener = function(){
   var data;
-  $('.update').click(function(){
+  $('.update').click(function(e){
+    console.log('here');
+    e.preventDefault();
     data = {
-      name: $('.name').val(),
+      name: $('.lion-name').val(),
       id: $('.lion-id').val(),
       age: $('.age').val(),
       pride: $('.pride').val(),
       gender: $('.gender').val()
     };
     $.ajax({
-      url: 'http://localhost:3000/lions',
+      url: 'http://localhost:3000/lions/' + data.id,
       method: 'PUT',
       data: data,
-      success: function(data){
-        console.log(data);
+      success: function(){
+        document.location.href = '/lions';
       },
       error: function(err){
         console.log(err);
@@ -57,13 +32,13 @@ var addUpdateListener = function(){
 var addDeleteListener = function(){
   var data;
   $('.delete').click(function(){
-    data = {name: $('.name').val()}
+    data = {id: $('.lion-id').val()}
     $.ajax({
-      url: 'http://localhost:3000/lions',
+      url: 'http://localhost:3000/lions/' + data.id,
       method: 'DELETE',
       data: data,
-      success: function(data){
-        console.log(data);
+      success: function(){
+        document.location.href = '/lions';
       },
       error: function(err){
         console.log(err);

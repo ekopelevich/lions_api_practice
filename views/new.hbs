@@ -1,0 +1,18 @@
+<h3>Add a Lion</h3>
+<form action="/lions" method="POST">
+  <label for="name">Name</label>
+  <input class="form-control" type="text" name="name" required>
+  <label for="age">Age</label>
+  <input class="form-control" type="number" name="age" required>
+  <label for="gender">Gender</label>
+  <select class="form-control" name="gender">
+      <option selected disabled required>Choose a Gender</option>
+      <option value="female">Female</option>
+      <option value="male">Male</option>
+      <option value="other">Other</option>
+  </select>
+  <label for="pride">Pride</label>
+  <input class="form-control" type="text" name="pride" required>
+  <br>
+  <input class="btn btn-success pull-right" type="submit" value="Submit">
+</form>

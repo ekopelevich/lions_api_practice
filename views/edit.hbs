@@ -1,0 +1,19 @@
+<h3>Update or Delete {{name}}</h3>
+<form>
+  <input class="lion-name" type="text" value="{{name}}" hidden>
+  <label>Age</label>
+  <input class="form-control age" type="number" value="{{age}}">
+  <label>Gender</label>
+  <select class="form-control gender" value="{{gender}}" required>
+      <option value="female">Female</option>
+      <option value="male">Male</option>
+      <option value="other">Other</option>
+  </select>
+  <label for="pride">Pride</label>
+  <input class="form-control pride" type="text" value="{{pride}}">
+  <input class="lion-id" type="text" value="{{id}}" hidden>
+  <br>
+
+  <input class="btn btn-danger pull-right delete" type="submit" value="Delete">
+  <input class="btn btn-warning pull-right update" type="submit" value="Update">
+</form>
